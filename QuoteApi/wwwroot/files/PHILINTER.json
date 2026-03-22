@@ -1,0 +1,312 @@
+{
+	"setting": {
+		"schoolLocation": "宿霧",
+		"flightDest": "宿霧"
+	},
+	"courseFee": {
+		"registrationfee": "120",
+		"registrationfeeInclusive": "no",
+		"summerSurcharge": "40",
+		"summerSurchargeStartTime": "7/1",
+		"summerSurchargeEndTime": "8/31",
+		"discountInclusive": "0",
+		"discount": "0.05",
+		"fixedDiscount": "0",
+		"legalGuardianFee": "0"
+	},
+	"logo": {
+		"picLocationRow": "7",
+		"picLocationCol": "2",
+		"picLocationLeft": "0",
+		"picLocationTop": "5",
+		"picwidth": "330",
+		"picheight": "110"
+	},
+	"localFee": [
+		{
+			"code": "1",
+			"DocItem": "Special Study Permit SSP",
+			"Item": "SSP學生簽證",
+			"content": "菲律賓學生就讀許可證",
+			"times": "1次",
+			"price": "7800",
+			"remark ": "效期6個月"
+		},
+		{
+			"code": "2",
+			"DocItem": "SSP ACR ECARD",
+			"Item": "SSP E-CARD",
+			"content": "菲律賓學生就讀許可證",
+			"times": "1次",
+			"price": "4500",
+			"remark ": "-"
+		},
+		{
+			"code": "3",
+			"DocItem": "Visa Extension fee",
+			"Item": "簽證延簽費",
+			"content": "入境菲律賓超過59天者",
+			"times": "1次",
+			"price": "-",
+			"remark ": "-"
+		},
+		{
+			"code": "4",
+			"DocItem": "TOURIST ACR I CARD",
+			"Item": "ACR I-CARD",
+			"content": "入境菲律賓超過59天者",
+			"times": "1次",
+			"price": "-",
+			"remark ": "-"
+		},
+		{
+			"code": "5",
+			"DocItem": "Deposit",
+			"Item": "宿舍押金",
+			"content": "依學校規定",
+			"times": "1週",
+			"price": "1000",
+			"remark ": "如無損壞物品會退還"
+		},
+		{
+			"code": "6",
+			"DocItem": "Water fee",
+			"Item": "水費",
+			"content": "依學校規定",
+			"times": "1週",
+			"price": "250",
+			"remark ": "-"
+		},
+		{
+			"code": "7",
+			"DocItem": "Maintenance Fee",
+			"Item": "管理費",
+			"content": "依學校規定",
+			"times": "1週",
+			"price": "1000",
+			"remark ": "-"
+		},
+		{
+			"code": "8",
+			"DocItem": "School ID Card",
+			"Item": "學生證ID+拍照",
+			"content": "-",
+			"times": "1次",
+			"price": "600",
+			"remark ": "-"
+		},
+		{
+			"code": "9",
+			"DocItem": "Electricity fee 16/",
+			"Item": "電費",
+			"content": "依學校規定",
+			"times": "1週",
+			"price": "500",
+			"remark ": "先繳給學校這個費用，若每週用電超過16度，則每度額外加收25披索"
+		},
+		{
+			"code": "10",
+			"DocItem": "PickUp fee Weekend",
+			"Item": "接機費",
+			"content": "團體接機",
+			"times": "1次",
+			"price": "0",
+			"remark ": "-"
+		},
+		{
+			"code": "11",
+			"DocItem": "laundry fee",
+			"Item": "洗衣費",
+			"content": "150P/5kg",
+			"times": "1週",
+			"price": "260",
+			"remark ": "預估(一週送洗兩次)"
+		},
+		{
+			"code": "12",
+			"DocItem": "material fee",
+			"Item": "教材費",
+			"content": "依學校課程規定",
+			"times": "1週",
+			"price": "500",
+			"remark ": "預估"
+		}
+	],
+	"courses": {
+		"IELTS": [
+			{
+				"name": "IELTS INTENSIVE",
+				"code": "IELTS1",
+				"pricePerWeek": 1200,
+				"description": "密集 IELTS 課程"
+			},
+			{
+				"name": "IELTS GUARANTEE 12 WEEKS",
+				"code": "IELTS2",
+				"pricePerWeek": 1420,
+				"description": "12週保證班"
+			},
+			{
+				"name": "IELTS GUARANTEE 8 WEEKS",
+				"code": "IELTS3",
+				"pricePerWeek": 1580,
+				"description": "8週保證班"
+			}
+		],
+		"ESL & SPEAKING": [
+			{
+				"name": "INTENSIVE ESL",
+				"code": "ESL1",
+				"pricePerWeek": 1030,
+				"description": "密集 ESL"
+			},
+			{
+				"name": "GENERAL ESL,900",
+				"code": "ESL2",
+				"pricePerWeek": 900,
+				"description": "一般 ESL"
+			},
+			{
+				"name": "IPS Intensive Power Speaking",
+				"code": "ESL3",
+				"pricePerWeek": 1170,
+				"description": ""
+			},
+			{
+				"name": "LIGHT ESL",
+				"code": "ESL4",
+				"pricePerWeek": 790,
+				"description": ""
+			}
+		],
+		"TOEIC, BUSINESS": [
+			{
+				"name": "TOEIC Regular",
+				"code": "TOEIC1",
+				"pricePerWeek": 1100,
+				"description": "TOEIC 一般班"
+			},
+			{
+				"name": "TOEIC GUARANTEE 12 WEEKS",
+				"code": "TOEIC2",
+				"pricePerWeek": 1260,
+				"description": "TOEIC 保證班"
+			},
+			{
+				"name": "Focus Industry",
+				"code": "TOEIC3",
+				"pricePerWeek": 1280,
+				"description": "產業重點"
+			},
+			{
+				"name": "Basic Business",
+				"code": "TOEIC4",
+				"pricePerWeek": 1150,
+				"description": "商業 一般班"
+			},
+			{
+				"name": "Advanced Business",
+				"code": "TOEIC5",
+				"pricePerWeek": 1200,
+				"description": "TOEIC 一般班"
+			}
+		],
+		"SPECIAL PROGRAM": [
+			{
+				"name": "IELTS 6.5 FOR STARTER UPPER ELEMENTARY",
+				"code": "SPECIAL1",
+				"pricePerWeek": 1107.5,
+				"description": ""
+			},
+			{
+				"name": "IELTS 5.5 FOR STARTER UPPER BEGINNER",
+				"code": "SPECIAL2",
+				"pricePerWeek": 1065,
+				"description": ""
+			}
+		],
+		"JUNIOR & FAMILY": [
+			{
+				"name": "JUNIOR ESL Primary 711yrs. Teen 1217yrs.",
+				"code": "JUNIOR1",
+				"pricePerWeek": 1340,
+				"description": ""
+			},
+			{
+				"name": "JUNIOR IELTS 1217yrs.",
+				"code": "JUNIOR2",
+				"pricePerWeek": 1490,
+				"description": ""
+			}
+		],
+		"PREMIUM": [
+			{
+				"name": "SPEAKING",
+				"code": "PREMIUM1",
+				"pricePerWeek": 1400,
+				"description": ""
+			},
+			{
+				"name": "JUNIOR SPEAKING",
+				"code": "PREMIUM12",
+				"pricePerWeek": 1400,
+				"description": ""
+			}
+		]
+	},
+	"room": [
+		{
+			"Name": "Single",
+			"roomType": "on-campus",
+			"code": "Room1",
+			"pricePerWeek": 1400,
+			"description": "單人房"
+		},
+		{
+			"Name": "Double",
+			"roomType": "on-campus",
+			"code": "Room2",
+			"pricePerWeek": 970,
+			"description": "雙人房"
+		},
+		{
+			"Name": "Triple",
+			"roomType": "on-campus",
+			"code": "Room3",
+			"pricePerWeek": 810,
+			"description": "三人房"
+		},
+		{
+			"Name": "AZON Single",
+			"roomType": "off-campus",
+			"code": "Room4",
+			"pricePerWeek": 1690,
+			"description": "AZON 單人房"
+		},
+		{
+			"Name": "AZON Double",
+			"roomType": "off-campus",
+			"code": "Room5",
+			"pricePerWeek": 1100,
+			"description": "AZON 雙人房"
+		},
+		{
+			"Name": "AZON Triple",
+			"roomType": "off-campus",
+			"code": "Room6",
+			"pricePerWeek": 890,
+			"description": "AZON 三人房"
+		}
+	],
+	"more4week": {
+		"more4week1": "0",
+		"more4week2": "0.25",
+		"more4week3": "0.5",
+		"more4week4": "0.75"
+	},
+	"less4week": {
+		"less4week1": "0.45",
+		"less4week2": "0.65",
+		"less4week3": "0.85"
+	}
+}
