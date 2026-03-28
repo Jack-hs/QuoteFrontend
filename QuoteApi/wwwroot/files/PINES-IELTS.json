@@ -1,0 +1,174 @@
+{
+  "setting": {
+    "schoolLocation": "宿霧",
+    "flightDest": "宿霧"
+  },
+  "courseFee": {
+    "registrationfee": "100",
+    "summerSurcharge": "40",
+    "discount": "0.05",
+    "legalGuardianFee": "0",
+    "registrationfeeInclusive": "no",
+    "summerSurchargeStartTime": "7/1",
+    "summerSurchargeEndTime": "8/31",
+    "discountInclusive": "0",
+    "fixedDiscount": "0"
+  },
+  "logo": {
+    "picLocationRow": "7"
+  },
+  "localFee": [
+    {
+      "code": "1",
+      "DocItem": "WATER AND ELECTRICITY",
+      "Item": "電費",
+      "content": "依學校規定",
+      "times": "1週",
+      "price": "0",
+      "remark ": "預收(超過會再收)"
+    },
+    {
+      "code": "2",
+      "DocItem": "SSP",
+      "Item": "SSP學生簽證",
+      "content": "菲律賓學生就讀許可證",
+      "times": "1次",
+      "price": "0",
+      "remark ": "效期6個月"
+    },
+    {
+      "code": "3",
+      "DocItem": "SSP ECARD",
+      "Item": "SSP E-CARD",
+      "content": "菲律賓學生就讀許可證",
+      "times": "1次",
+      "price": "0",
+      "remark ": ""
+    },
+    {
+      "code": "4",
+      "DocItem": "Points Deposit",
+      "Item": "宿舍押金",
+      "content": "依學校規定",
+      "times": "1週",
+      "price": "0",
+      "remark ": "畢業結算扣除超額電費及損壞物品會退還"
+    },
+    {
+      "code": "5",
+      "DocItem": "VISA extension",
+      "Item": "簽證延簽費",
+      "content": "入境菲律賓超過59天者",
+      "times": "1次",
+      "price": "0",
+      "remark ": ""
+    },
+    {
+      "code": "6",
+      "DocItem": "ACR ICARD",
+      "Item": "ACR I-CARD",
+      "content": "菲律賓學生就讀許可證",
+      "times": "1次",
+      "price": "0",
+      "remark ": ""
+    },
+    {
+      "code": "7",
+      "DocItem": "Pickup Free",
+      "Item": "接機費",
+      "content": "團體接機",
+      "times": "1次",
+      "price": "0",
+      "remark ": ""
+    },
+    {
+      "code": "8",
+      "DocItem": "Laundry Fee",
+      "Item": "洗衣費",
+      "content": "150P/5kg",
+      "times": "1週",
+      "price": "0",
+      "remark ": "預估(一週送洗兩次)"
+    },
+    {
+      "code": "9",
+      "DocItem": "Material Fee",
+      "Item": "教材費",
+      "content": "依學校課程規定",
+      "times": "1週",
+      "price": "0",
+      "remark ": "預估"
+    }
+  ],
+  "courses": {
+    "IELTS": [
+      {
+        "name": "PreIELTS",
+        "code": "C001",
+        "pricePerWeek": 1050,
+        "description": ""
+      },
+      {
+        "name": "IELTS",
+        "code": "C002",
+        "pricePerWeek": 1100,
+        "description": ""
+      },
+      {
+        "name": "IELTS G 8w",
+        "code": "C003",
+        "pricePerWeek": 2900,
+        "description": ""
+      },
+      {
+        "name": "IELTS G 12w",
+        "code": "C004",
+        "pricePerWeek": 4050,
+        "description": ""
+      }
+    ]
+  },
+  "room": [
+    {
+      "Name": "1Bed A",
+      "roomType": "on-campus",
+      "code": "Room1",
+      "pricePerWeek": 1250,
+      "description": "1Bed A"
+    },
+    {
+      "Name": "1Bed B",
+      "roomType": "on-campus",
+      "code": "Room2",
+      "pricePerWeek": 1150,
+      "description": "1Bed B"
+    },
+    {
+      "Name": "2Beds A",
+      "roomType": "on-campus",
+      "code": "Room3",
+      "pricePerWeek": 870,
+      "description": "2Beds A"
+    },
+    {
+      "Name": "3Beds",
+      "roomType": "on-campus",
+      "code": "Room4",
+      "pricePerWeek": 680,
+      "description": "3Beds"
+    },
+    {
+      "Name": "4Beds",
+      "roomType": "on-campus",
+      "code": "Room5",
+      "pricePerWeek": 630,
+      "description": "4Beds"
+    }
+  ],
+  "more4week": {
+    "more4week1": "0"
+  },
+  "less4week": {
+    "less4week1": "0"
+  }
+}

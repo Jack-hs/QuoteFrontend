@@ -180,7 +180,9 @@ export default function FlightSearch({
     setResults(null);
 
     try {
-      const res = await axios.get('/api/flight/search', {
+      //const apiUrl = import.meta.env.VITE_API_URL || '';
+      const apiUrl = 'https://localhost:7080';
+      const res = await axios.get(apiUrl+'/api/flight/search', {
         params: {
           from: departure,
           to: arrival,

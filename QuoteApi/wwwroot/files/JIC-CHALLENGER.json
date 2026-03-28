@@ -1,0 +1,218 @@
+{
+  "setting": {
+    "schoolLocation": "宿霧",
+    "flightDest": "宿霧"
+  },
+  "courseFee": {
+    "registrationfee": "100",
+    "summerSurcharge": "40",
+    "discount": "0.05",
+    "legalGuardianFee": "0",
+    "registrationfeeInclusive": "no",
+    "summerSurchargeStartTime": "6/28",
+    "summerSurchargeEndTime": "8/21",
+    "discountInclusive": "0",
+    "fixedDiscount": "0"
+  },
+  "logo": {
+    "picLocationRow": "7"
+  },
+  "localFee": [
+    {
+      "code": "1",
+      "DocItem": "SSP",
+      "Item": "SSP學生簽證",
+      "content": "菲律賓學生就讀許可證",
+      "times": "1次",
+      "price": "0",
+      "remark ": "效期6個月"
+    },
+    {
+      "code": "2",
+      "DocItem": "SSP ECARD",
+      "Item": "SSP E-CARD",
+      "content": "菲律賓學生就讀許可證",
+      "times": "1次",
+      "price": "0",
+      "remark ": ""
+    },
+    {
+      "code": "3",
+      "DocItem": "ACR ICARD",
+      "Item": "ACR I-CARD",
+      "content": "菲律賓學生就讀許可證",
+      "times": "1次",
+      "price": "0",
+      "remark ": ""
+    },
+    {
+      "code": "4",
+      "DocItem": "School ID Card",
+      "Item": "學生證",
+      "content": "依學校規定",
+      "times": "1次",
+      "price": "0",
+      "remark ": ""
+    },
+    {
+      "code": "5",
+      "DocItem": "Visa Extension fee",
+      "Item": "簽證延簽費",
+      "content": "入境菲律賓超過59天者",
+      "times": "1次",
+      "price": "0",
+      "remark ": ""
+    },
+    {
+      "code": "6",
+      "DocItem": "WATER AND ELECTRICITY",
+      "Item": "電費",
+      "content": "依學校規定",
+      "times": "1週",
+      "price": "0",
+      "remark ": "預收(超過會再收)"
+    },
+    {
+      "code": "7",
+      "DocItem": "Deposit",
+      "Item": "宿舍押金",
+      "content": "依學校規定",
+      "times": "1週",
+      "price": "0",
+      "remark ": "畢業結算扣除超額電費及損壞物品會退還"
+    },
+    {
+      "code": "8",
+      "DocItem": "Maintenance Fee",
+      "Item": "",
+      "content": "",
+      "times": "",
+      "price": "0",
+      "remark ": ""
+    },
+    {
+      "code": "9",
+      "DocItem": "PickUp fee Weekend",
+      "Item": "接機費",
+      "content": "團體接機",
+      "times": "1次",
+      "price": "0",
+      "remark ": ""
+    },
+    {
+      "code": "10",
+      "DocItem": "Laundry Fee",
+      "Item": "洗衣費",
+      "content": "150P/5kg",
+      "times": "1週",
+      "price": "0",
+      "remark ": "預估(一週送洗兩次)"
+    },
+    {
+      "code": "11",
+      "DocItem": "Material Fee",
+      "Item": "教材費",
+      "content": "依學校課程規定",
+      "times": "1週",
+      "price": "0",
+      "remark ": "預估"
+    }
+  ],
+  "courses": {
+    "ESL": [
+      {
+        "name": "ESL Flex",
+        "code": "C001",
+        "pricePerWeek": 580,
+        "description": ""
+      },
+      {
+        "name": "ESL Lite",
+        "code": "C002",
+        "pricePerWeek": 760,
+        "description": ""
+      },
+      {
+        "name": "ESL Core",
+        "code": "C003",
+        "pricePerWeek": 860,
+        "description": ""
+      },
+      {
+        "name": "ESL Standard",
+        "code": "C004",
+        "pricePerWeek": 960,
+        "description": ""
+      }
+    ],
+    "IELTS": [
+      {
+        "name": "IELTS Flex",
+        "code": "C005",
+        "pricePerWeek": 960,
+        "description": ""
+      },
+      {
+        "name": "IELTS Lite",
+        "code": "C006",
+        "pricePerWeek": 1010,
+        "description": ""
+      },
+      {
+        "name": "IELTS Core",
+        "code": "C007",
+        "pricePerWeek": 1060,
+        "description": ""
+      },
+      {
+        "name": "IELTS Standard",
+        "code": "C008",
+        "pricePerWeek": 1060,
+        "description": ""
+      }
+    ]
+  },
+  "room": [
+    {
+      "Name": "Room for 1studio",
+      "roomType": "on-campus",
+      "code": "Room1",
+      "pricePerWeek": 1300,
+      "description": "Room for 1studio"
+    },
+    {
+      "Name": "Room for 2studio",
+      "roomType": "on-campus",
+      "code": "Room2",
+      "pricePerWeek": 800,
+      "description": "Room for 2studio"
+    },
+    {
+      "Name": "Room for 4loft",
+      "roomType": "on-campus",
+      "code": "Room3",
+      "pricePerWeek": 750,
+      "description": "Room for 4loft"
+    },
+    {
+      "Name": "Room for 4studio",
+      "roomType": "on-campus",
+      "code": "Room4",
+      "pricePerWeek": 600,
+      "description": "Room for 4studio"
+    },
+    {
+      "Name": "Semi Single",
+      "roomType": "on-campus",
+      "code": "Room5",
+      "pricePerWeek": 1100,
+      "description": "Semi Single"
+    }
+  ],
+  "more4week": {
+    "more4week1": "0"
+  },
+  "less4week": {
+    "less4week1": "0.4"
+  }
+}

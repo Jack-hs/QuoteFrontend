@@ -16,11 +16,14 @@ namespace QuoteApi.Controllers
     public class QuoteController : ControllerBase
     {
         
-        public IniFile _schoolIni;
+        //public IniFile _schoolIni;
         private readonly IWebHostEnvironment _env;  // 注入！
+        private readonly IniFile _schoolIni;
+        private readonly OperationExcel operationExcel;
+        private readonly TuitionFeeCalculate tuitionFeeCalculate;
         AcademyData academyData;
-        OperationExcel operationExcel;
-        TuitionFeeCalculate tuitionFeeCalculate;
+        //OperationExcel operationExcel;
+        //TuitionFeeCalculate tuitionFeeCalculate;
 
 
         // 加建構子
@@ -32,6 +35,81 @@ namespace QuoteApi.Controllers
             //ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             operationExcel = new OperationExcel();
             tuitionFeeCalculate = new TuitionFeeCalculate();
+            //LoadschoolIni();
+        }
+
+        [HttpPost("upload-excel")]
+        public IActionResult UploadExcel([FromForm] IFormFile file, [FromForm] string schoolName, [FromForm] string fileType)
+        {
+            if (file == null || file.Length == 0) return BadRequest("請選擇要上傳的檔案");
+            if (string.IsNullOrWhiteSpace(schoolName)) return BadRequest("請提供學校名稱");
+            if (string.IsNullOrWhiteSpace(fileType)) return BadRequest("請選擇檔案類型 (Tuition 或 LocalFee)");
+
+            try
+            {
+                // 確保 files 資料夾存在
+                var filesDir = Path.Combine(_env.WebRootPath, "files");
+                if (!Directory.Exists(filesDir)) Directory.CreateDirectory(filesDir);
+
+                // 決定輸出的 JSON 檔名
+                string suffix = fileType.Equals("tuition", StringComparison.OrdinalIgnoreCase) ? "TuitionData" : "LocalFeeData";
+                string outputName = $"{schoolName.ToUpper()}_{suffix}.json";
+                string outputPath = Path.Combine(filesDir, outputName);
+
+                // 開啟上傳檔案的資料流
+                using (var stream = file.OpenReadStream())
+                {
+                    if (fileType.Equals("tuition", StringComparison.OrdinalIgnoreCase))
+                    {
+                        var baseData = operationExcel.ParseTUITIONExcelToJsonFromStream(stream, outputPath);
+
+                        // 如果想要確保兩份檔案都上傳後才產生系統檔，可以做個簡單判斷：
+                        string localFeePath = Path.Combine(filesDir, $"{schoolName.ToUpper()}_LocalFeeData.json");
+                        string tuitionPath = Path.Combine(filesDir, $"{schoolName.ToUpper()}_TuitionData.json");
+                        // 當發現兩份檔案都存在時，就進行合併產生
+                        if (System.IO.File.Exists(localFeePath) && System.IO.File.Exists(tuitionPath))
+                        {
+                            operationExcel.GenerateSystemJsonFromTemplate(schoolName, baseData);
+                        }
+                    }
+                    else
+                    {
+                        operationExcel.ParseLocalFeeToJsonFromStream(stream, outputPath);
+                    }
+                }
+
+                return Ok(new { message = "轉換並儲存成功！", fileName = outputName });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"解析失敗: {ex.Message}");
+            }
+        }
+
+
+        private void LoadschoolIni()
+        {
+            //修改報價須知ini
+            ZoneData.QuotationTermsDict.Clear();
+            int QuotationTerms = _schoolIni.GetKeys("QuotationTerms").Count();
+            for (int i = 1; i <= QuotationTerms; i++)
+            {
+                //if (i == 0) continue;
+                string Terms = _schoolIni.IniReadUTF8("QuotationTerms", "Term" + i);
+                if (!ZoneData.QuotationTermsDict.ContainsKey(Terms)) ZoneData.QuotationTermsDict.Add(Terms, new List<Tuple<int, int>>());
+
+                int ranges = _schoolIni.GetKeys("Term" + i).Count();
+                if (ranges > 0) //有要範圍要變換紅色字強調
+                {
+                    for (int j = 1; j <= ranges; j++)
+                    {
+                        string context = _schoolIni.IniReadUTF8("Term" + i, "range" + j);
+                        ZoneData.QuotationTermsDict[Terms].Add(new Tuple<int, int>(Terms.IndexOf(context) + 1, context.Count()));
+                    }
+
+                }
+            }
+            Console.WriteLine("QuotationTerms Config Finish");
         }
 
         private readonly Dictionary<string, string> _schoolTuitionFiles = new(StringComparer.OrdinalIgnoreCase)
@@ -410,7 +488,7 @@ namespace QuoteApi.Controllers
                         if (item.Value.TryGetProperty(targetWeek, out var priceElement) ||
                             item.Value.TryGetProperty(targetWeek.ToLower(), out priceElement))
                         {
-                            LocalFeeInfo localFeeInfo = ZoneData.appSettings.LocalFee.FirstOrDefault(localFee => localFee.DocItem == DocItem); 
+                            LocalFeeInfo localFeeInfo = ZoneData.appSettings.LocalFee.FirstOrDefault(localFee => localFee.DocItem == DocItem || localFee.DocItem.Contains(DocItem)); 
 
                             string Key = localFeeInfo.Code;
                             string Item = localFeeInfo.Item;
@@ -473,13 +551,13 @@ namespace QuoteApi.Controllers
                 CourseFees = courseFeeItems,
                 localFees = localFeeList,
                 TotalUSD = totalUSD,
-                TotalNTD = totalUSD * request.ExchangeRate, //美金匯率要改成來自富邦銀行
+                TotalNTD = totalUSD * request.UsaExchangeRate, //美金匯率要改成來自富邦銀行
                 otherFees = new List<object>
-    {
-        new { key = "air", item = "來回機票 (台北-宿霧)",Content="NT $6,000~20,000不等",Weeks="宿霧", people = 1, unitPrice = request.AirTicket, amount = request.AirTicket, remark = "可依航班調整" },
-        new { key = "visa", item = "簽證費 (9A旅遊簽)",Content="紙本NT$1,200/電子NT$1,500",Weeks="紙本", people = 1, unitPrice = request.Visa, amount = request.Visa, remark = "線上/紙本申請" },
-        new { key = "ins", item = "旅平險/醫療險",Content="依各保險公司定價",Weeks="", people = 1, unitPrice = request.Insurance, amount = request.Insurance, remark = "建議投保3個月" }
-    }
+                {
+                    new { key = "air", item = "來回機票",Content="NT $6,000~20,000不等",Weeks="宿霧", people = 1, unitPrice = request.AirTicket, amount = request.AirTicket, remark = "可依航班調整" },
+                    new { key = "visa", item = "簽證費",Content="紙本NT$1,200/電子NT$1,500",Weeks="紙本", people = 1, unitPrice = request.Visa, amount = request.Visa, remark = "線上/紙本申請" },
+                    new { key = "ins", item = "旅平險/醫療險",Content="依各保險公司定價",Weeks="", people = 1, unitPrice = request.Insurance, amount = request.Insurance, remark = "建議投保3個月" }
+                }
             });
         }
     

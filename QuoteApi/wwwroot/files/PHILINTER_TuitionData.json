@@ -160,24 +160,24 @@
     },
     "IELTS GUARANTEE 12 WEEKS": {
       "Single": {
-        "12W": 8460
+        "12W": 8940
       },
       "Double": {
-        "12W": 7170
+        "12W": 7650
       },
       "Triple": {
-        "12W": 6690
+        "12W": 7170
       }
     },
     "IELTS GUARANTEE 8 WEEKS": {
       "Single": {
-        "8W": 5960
+        "8W": 2800
       },
       "Double": {
-        "8W": 5100
+        "8W": 1940
       },
       "Triple": {
-        "8W": 4780
+        "8W": 1620
       }
     }
   },

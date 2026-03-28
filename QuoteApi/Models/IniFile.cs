@@ -13,7 +13,43 @@ namespace QuoteApi.Models
             Path = iniPath;
             Directory.CreateDirectory(System.IO.Path.GetDirectoryName(iniPath) ?? "");
         }
+        /// <summary>
+        /// Read Data Value From the Ini File Encoding.UTF8
+        /// </summary>
+        /// <PARAM name="Section"></PARAM>
+        /// <PARAM name="Key"></PARAM>
+        /// <PARAM name="Path"></PARAM>
+        /// <returns></returns>
+        public string IniReadUTF8(string Section, string Key)
+        {
+            //StringBuilder temp = new StringBuilder(255);
+            //int i = GetPrivateProfileString(Section, Key, "", temp,
+            //                                255, this.path);
+            //return temp.ToString();
 
+            if (!File.Exists(this.Path)) return "";
+
+            string[] lines = File.ReadAllLines(this.Path, Encoding.UTF8);
+            string currentSection = "";
+
+            foreach (string line in lines)
+            {
+                string trimmed = line.Trim();
+                if (trimmed.StartsWith("[") && trimmed.EndsWith("]"))
+                {
+                    currentSection = trimmed.Substring(1, trimmed.Length - 2);
+                }
+                else if (trimmed.Contains("=") && currentSection == Section)
+                {
+                    var parts = trimmed.Split('=', (char)2);
+                    if (parts[0].Trim() == Key)
+                    {
+                        return parts[1].Trim();
+                    }
+                }
+            }
+            return "";
+        }
         public void WriteValue(string section, string key, string value)
         {
             var lines = LoadLines();

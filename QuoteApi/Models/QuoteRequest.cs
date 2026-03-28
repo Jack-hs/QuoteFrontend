@@ -6,7 +6,8 @@ public class QuoteRequest
     public string RoomType { get; set; }
     public string Placeofstay { get; set; }
     public int Weeks { get; set; }
-    public decimal ExchangeRate { get; set; }
+    public decimal UsaExchangeRate { get; set; } = 0;
+    public decimal PhpExchangeRate { get; set; } = 0;
     public bool NeedGuardianFee { get; set; }
     // 👇 日期相關的欄位 👇
     public DateTime StartDate { get; set; } // 預計出發日

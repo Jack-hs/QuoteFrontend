@@ -1,0 +1,240 @@
+{
+  "setting": {
+    "schoolLocation": "宿霧",
+    "flightDest": "宿霧"
+  },
+  "courseFee": {
+    "registrationfee": "100",
+    "summerSurcharge": "40",
+    "discount": "0.05",
+    "legalGuardianFee": "25",
+    "registrationfeeInclusive": "yes",
+    "summerSurchargeStartTime": "7/5",
+    "summerSurchargeEndTime": "8/29",
+    "discountInclusive": "0",
+    "fixedDiscount": "0"
+  },
+  "logo": {
+    "picLocationRow": "7"
+  },
+  "localFee": [
+    {
+      "code": "1",
+      "DocItem": "SSP",
+      "Item": "SSP學生簽證",
+      "content": "菲律賓學生就讀許可證",
+      "times": "1次",
+      "price": "0",
+      "remark ": "效期6個月"
+    },
+    {
+      "code": "2",
+      "DocItem": "SSP ECARD",
+      "Item": "SSP E-CARD",
+      "content": "菲律賓學生就讀許可證",
+      "times": "1次",
+      "price": "0",
+      "remark ": ""
+    },
+    {
+      "code": "3",
+      "DocItem": "ACR ICARD",
+      "Item": "ACR I-CARD",
+      "content": "菲律賓學生就讀許可證",
+      "times": "1次",
+      "price": "0",
+      "remark ": ""
+    },
+    {
+      "code": "4",
+      "DocItem": "ID CARD",
+      "Item": "學生證",
+      "content": "依學校規定",
+      "times": "1次",
+      "price": "0",
+      "remark ": ""
+    },
+    {
+      "code": "5",
+      "DocItem": "Electricity fee",
+      "Item": "電費",
+      "content": "依學校規定",
+      "times": "1週",
+      "price": "0",
+      "remark ": "預收(超過會再收)"
+    },
+    {
+      "code": "6",
+      "DocItem": "Operation fee",
+      "Item": "管理費",
+      "content": "依學校規定",
+      "times": "1週",
+      "price": "0",
+      "remark ": ""
+    },
+    {
+      "code": "7",
+      "DocItem": "Water fee",
+      "Item": "水費",
+      "content": "依學校規定",
+      "times": "1週",
+      "price": "0",
+      "remark ": ""
+    },
+    {
+      "code": "8",
+      "DocItem": "Deposit",
+      "Item": "宿舍押金",
+      "content": "依學校規定",
+      "times": "1週",
+      "price": "0",
+      "remark ": "畢業結算扣除超額電費及損壞物品會退還"
+    },
+    {
+      "code": "9",
+      "DocItem": "Pick up",
+      "Item": "接機費",
+      "content": "團體接機",
+      "times": "1次",
+      "price": "0",
+      "remark ": ""
+    },
+    {
+      "code": "10",
+      "DocItem": "59 Visa",
+      "Item": "簽證延簽費",
+      "content": "入境菲律賓超過59天者",
+      "times": "1次",
+      "price": "0",
+      "remark ": ""
+    },
+    {
+      "code": "11",
+      "DocItem": "Laundry Fee",
+      "Item": "洗衣費",
+      "content": "150P/5kg",
+      "times": "1週",
+      "price": "260",
+      "remark ": "預估(一週送洗兩次)"
+    },
+    {
+      "code": "12",
+      "DocItem": "Material Fee",
+      "Item": "教材費",
+      "content": "依學校課程規定",
+      "times": "1週",
+      "price": "500",
+      "remark ": "預估"
+    }
+  ],
+  "courses": {
+    "SPARTA COURSE": [
+      {
+        "name": "Intensive ESL",
+        "code": "C001",
+        "pricePerWeek": 1030,
+        "description": ""
+      },
+      {
+        "name": "IELTS Guarantee",
+        "code": "C002",
+        "pricePerWeek": 1290,
+        "description": ""
+      },
+      {
+        "name": "Specific Courses",
+        "code": "C003",
+        "pricePerWeek": 1150,
+        "description": ""
+      },
+      {
+        "name": "Power Speaking 6",
+        "code": "C004",
+        "pricePerWeek": 1230,
+        "description": ""
+      },
+      {
+        "name": "Power Speaking 8",
+        "code": "C005",
+        "pricePerWeek": 1410,
+        "description": ""
+      }
+    ],
+    "SEMI SPARTA COURSE": [
+      {
+        "name": "ESL Classic",
+        "code": "C006",
+        "pricePerWeek": 980,
+        "description": ""
+      },
+      {
+        "name": "Specific Courses",
+        "code": "C007",
+        "pricePerWeek": 1100,
+        "description": ""
+      },
+      {
+        "name": "Power Speaking 6",
+        "code": "C008",
+        "pricePerWeek": 1180,
+        "description": ""
+      },
+      {
+        "name": "Power Speaking 8",
+        "code": "C009",
+        "pricePerWeek": 1360,
+        "description": ""
+      }
+    ]
+  },
+  "room": [
+    {
+      "Name": "Single",
+      "roomType": "on-campus",
+      "code": "Room1",
+      "pricePerWeek": 1400,
+      "description": "Single"
+    },
+    {
+      "Name": "Double",
+      "roomType": "on-campus",
+      "code": "Room2",
+      "pricePerWeek": 1030,
+      "description": "Double"
+    },
+    {
+      "Name": "Triple",
+      "roomType": "on-campus",
+      "code": "Room3",
+      "pricePerWeek": 950,
+      "description": "Triple"
+    },
+    {
+      "Name": "Quadruple",
+      "roomType": "on-campus",
+      "code": "Room4",
+      "pricePerWeek": 900,
+      "description": "Quadruple"
+    },
+    {
+      "Name": "Condominium Single",
+      "roomType": "on-campus",
+      "code": "Room5",
+      "pricePerWeek": 1550,
+      "description": "Condominium Single"
+    },
+    {
+      "Name": "Condominium Double",
+      "roomType": "on-campus",
+      "code": "Room6",
+      "pricePerWeek": 1150,
+      "description": "Condominium Double"
+    }
+  ],
+  "more4week": {
+    "more4week1": "0"
+  },
+  "less4week": {
+    "less4week1": "0.4"
+  }
+}
