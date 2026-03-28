@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Jack-hs.github.io/QuoteFrontend",
+  "homepage": "https://jack-hs.github.io/crispy-train/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

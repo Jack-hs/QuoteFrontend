@@ -129,8 +129,8 @@ const handleExportExcel = async () => {
 
 const { RangePicker } = DatePicker;
 const { Option } = Select;
-//const apiUrl = import.meta.env.VITE_API_URL || '';
-const apiUrl = 'https://localhost:7080';
+const apiUrl = import.meta.env.VITE_API_URL || 'https://localhost:7080';
+//const apiUrl = 'https://localhost:7080';
 
 // axios.defaults.baseURL = 'https://localhost:5129';  // 你的後端端口
 

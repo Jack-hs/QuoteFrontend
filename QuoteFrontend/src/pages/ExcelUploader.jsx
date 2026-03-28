@@ -40,7 +40,8 @@ const ExcelUploader = () => {
             setStatus('上傳中並轉換格式...');
             
             // 替換成您的實際 API 網址，例如 http://localhost:5000/api/quote/upload-excel
-            const apiUrl = 'https://localhost:7080';
+            //const apiUrl = 'https://localhost:7080';
+            const apiUrl = import.meta.env.VITE_API_URL || 'https://localhost:7080';
             const response = await fetch(apiUrl + '/api/quote/upload-excel', {
                 method: 'POST',
                 body: formData,

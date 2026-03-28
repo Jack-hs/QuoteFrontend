@@ -12,8 +12,9 @@ export default function ExchangeRate({ onRatesLoaded }) {
       try {
         // 替換成你真正的 C# API 網址
         //const apiUrl = import.meta.env.VITE_API_URL || '';
-        const apiUrl = 'https://localhost:7080';
+        //const apiUrl = 'https://localhost:7080';
         //const apiUrl = 'https://languverse-quotesystem-api-20260322221023-fxe9b4e0brcud5e9.eastasia-01.azurewebsites.net/api/ExchangeRate/latest';
+        const apiUrl = import.meta.env.VITE_API_URL || 'https://localhost:7080';
         console.log('ExchangeRate.jsx' + apiUrl)
         const response = await axios.get(apiUrl +'/api/ExchangeRate/latest');
         

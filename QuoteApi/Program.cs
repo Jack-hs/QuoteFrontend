@@ -24,7 +24,9 @@ builder.Services.AddControllers();
 builder.Services.AddCors(options => 
 {
     options.AddPolicy("AllowAll", 
-        policy => policy.AllowAnyOrigin()
+        policy => policy.WithOrigins(
+            "https://jack-hs.github.io/QuoteFrontend", //你的 GitHub Pages
+            "https://carma-proemployer-elnora.ngrok-free.dev") // 你的 ngrok（前端用不到，但後備）)
                        .AllowAnyMethod()
                        .AllowAnyHeader());
 });
